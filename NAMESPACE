@@ -1,0 +1,4 @@
+importFrom(Rcpp, sourceCpp)
+useDynLib(DepthDescent) 
+exportPattern("^[[:alpha:]]+")
+export(matrix_depth_by_descent)
