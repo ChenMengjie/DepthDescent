@@ -3,7 +3,7 @@
 
 ### Introduction
 
-**DepthDescent** implements an algorithm to compute the deepest matrix estimator proposed in https://arxiv.org/abs/1506.00691.  The core idea of the algorithm is to start with some robust scatter matrix estimator that is easy to compute, and then iteratively evaluate its depth on some direction subset $\bar{\mathcal{U}}$ of finite cardinality in $\mathcal{U}$ to approximate its matrix depth function and move towards the directions that can improve the depth. 
+**DepthDescent** implements an algorithm to compute the deepest matrix estimator proposed in https://arxiv.org/abs/1506.00691.  The core idea of the algorithm is to start with some robust scatter matrix estimator that is easy to compute, and then iteratively evaluate its depth on some direction subset of finite cardinality to approximate its matrix depth function and move towards the directions that can improve the depth. 
 
 ### Installation
 
