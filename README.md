@@ -7,6 +7,13 @@
 
 ### Installation
 
+**DepthDescent** relies on the following R packages: **Rcpp** and **RcppArmadillo**. These package need to be pre-installed. 
+
+  ```R
+  install.packages ("Rcpp")
+  install.packages ("RcppArmadillo")
+  ```
+  
 **DepthDescent** can be installed from github directly as follows:
 
   ```R
@@ -31,8 +38,7 @@ indicators <- sample(c(0, 1), n, replace = TRUE, prob = c(per, 1 - per))
 outlier <- length(indicators[indicators == 0])
 Z1 <- mvrnorm(n-outlier, rep(0, p), Sigma1)
 if(per!=0){
-	Z2 <- mvrnorm(outlier, rep(10, 10), diag(p))
-	Z <- rbind(Z1, Z2)
+	Z2 <- matrix(10, ncol = p, nrow = outlier)
 } else {
 	Z <- Z1
 }
